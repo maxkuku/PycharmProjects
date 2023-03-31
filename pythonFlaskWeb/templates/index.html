@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Сайт кота Мурзика на Python</title>
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+        <link href="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav>
+            <div class="logo">
+                <a href="index.html">Кот<em> Мурзик</em></a>
+            </div>
+            <div class="menu-icon">
+                <span></span>
+            </div>
+        </nav>
+
+        <div id="video-container">
+            <div class="video-overlay"></div>
+
+            <div class="video-content">
+                <div class="inner">
+                    <h1>Сайт любимого Кота<em> Мурзика</em></h1>
+                    <p class="slogan">Каждая любимая игрушка заслуживает сайта!</p>
+                    <p class="descr">Кот Мурзик любит сидеть в кресле, спать на краешке кровати. Он любит путешествовать и фотографируется в путешествиях, чтобы потом длинным зимним вечером сесть перед экраном и повспоминать счастливые впечатления от поездок!</p>
+                    <div class="scroll-icon">
+                        <a class="scrollTo" data-scrollto="portfolio" href="#"><img src="{{ url_for('static', filename='images/scroll-icon.png')}}" alt="Scroll to gallery icon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <video autoplay="" loop="" muted="">
+                <source src="https://kotmurzik.ru/mishin-timelapse-elbrus.m4v" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="full-screen-portfolio" id="portfolio">
+            <div id="portfolio__inner" class="cont-full"></div>
+        </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p id="copy">© 2020–2022</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>new SimpleLightbox({elements: '#portfolio__inner a'});</script>
+    </body>
+</html>

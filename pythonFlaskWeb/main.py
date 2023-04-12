@@ -22,7 +22,7 @@ def save_picture(form_picture):
     i = Image.open(form_picture)
     i.thumbnail(output_size)
 
-    form_picture.save(picture_path)
+    i.save(picture_path)
 
     return picture_fn
 
